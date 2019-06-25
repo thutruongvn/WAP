@@ -1,0 +1,28 @@
+@font-face {
+    font-family: WhiteAngelicaTitle;
+    src: url('font/WhiteAngelica.ttf');
+}
+@font-face {
+    font-family: DKLemonYellowSun;
+    src: url('font/DKLemonYellowSun.otf');
+}
+h1 {
+    font-family: WhiteAngelicaTitle;
+    font-size: 2em;
+}
+h2 {
+    font-family: DKLemonYellowSun;
+    font-size: 20pt;
+    color: darkcyan
+}
+p {
+    font-family: 'Courier New', Courier, monospace
+}
+.em {
+    color: darkgreen;
+    font-weight: bold
+}
+a {
+    color: red
+}
+
