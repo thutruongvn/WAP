@@ -8,15 +8,14 @@
 }
 h1 {
     font-family: WhiteAngelicaTitle;
-    font-size: 2em;
+    font-size: 26pt;
+    text-align: center;
+    font-weight: bold;
 }
 h2 {
     font-family: DKLemonYellowSun;
     font-size: 20pt;
     color: darkcyan
-}
-p {
-    font-family: 'Courier New', Courier, monospace
 }
 .em {
     color: darkgreen;

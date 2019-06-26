@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="icon" href="img/pie_icon.gif" type="image/gif" sizes="16x16">
     <title>Lemon Meringue Pie Recipe</title>
     <link href="css/recipe.css" rel="stylesheet" type="text/css"/>
+    <link href="css/global.css" rel="stylesheet" type="text/css" />
 </head>
-<header>
-    Grandma's Lemon Meringue Pie
-</header>
 <body>
-<div>
-    <img src="img/pie.jpg" alt="lemon meringue pie"/>
+<div id="header">
+    <h1>Grandma's Lemon Meringue Pie</h1>
+</div>
+<div id="body">
+    <div><img src="img/pie.jpg" alt="lemon meringue pie"/></div>
     <p>
         One 9-inch pie<br/>
         30 Min - Prep time<br/>
@@ -21,23 +23,23 @@
     <h2>INGREDIENTS</h2>
     <ul >
         <li>1 cup white sugar</li>
-        <li>2 tbsp all-purpose flour</li>
-        <li>3 tbsp cornstarch</li>
-        <li>1/4 tsp salt</li>
+        <li>2 <div class="tooltip">tbsp<span class="tooltiptext">tablespoons</span></div> all-purpose flour</li>
+        <li>3 <div class="tooltip">tbsp<span class="tooltiptext">tablespoons</span></div> cornstarch</li>
+        <li>1/4 <div class="tooltip">tsp<span class="tooltiptext">teaspoon</span></div> salt</li>
         <li>1 1/2 cups water</li>
         <li>2 lemons, juiced and zested</li>
-        <li>2 tbsp butter</li>
+        <li>2 <div class="tooltip">tbsp<span class="tooltiptext">tablespoons</span></div> butter</li>
         <li>4 egg yolks, beaten</li>
         <li>1 (9 inch) pie crust, baked</li>
         <li>4 egg whites</li>
-        <li>6 tbsp white sugar</li>
+        <li>6 <div class="tooltip">tbsp<span class="tooltiptext">tablespoons</span></div> white sugar</li>
     </ul>
     <hr />
     <h2>DIRECTIONS</h2>
     <ol >
-        <li><span >Preheat Oven: </span>Preheat oven to 350 degrees F (175 degrees C).</li>
+        <li><span class="em">Preheat Oven: </span>Preheat oven to 350 degrees F (175 degrees C).</li>
         <li>
-            <span>Make Lemon Filling: </span>In a medium saucepan ...
+            <span class="em">Make Lemon Filling: </span>In a medium saucepan ...
             <ul>
                     <li>Whisk together 1 cup sugar, flour, cornstarch, and salt.</li>
                     <li>Stir in water, lemon juice and lemon zest.</li>
@@ -51,16 +53,16 @@
             </ul>
         </li>
         <li>
-            <span>Make Meringue: </span>In a large glass or metal bowl ...
+            <span class="em">Make Meringue: </span>In a large glass or metal bowl ...
             <ul>
                 <li>Whip egg whites until foamy.</li>
                 <li>Add sugar gradually, and continue to whip until stiff peaks form.</li>
                 <li>Spread meringue over pie, sealing the edges at the crust.</li>
             </ul>
         </li>
-        <li><span>Bake: </span>Bake in preheated oven for 10 minutes, or until meringue is golden brown.</li>
+        <li><span class="em">Bake: </span>Bake in preheated oven for 10 minutes, or until meringue is golden brown.</li>
     </ol>
-    <p>This is our favorite recipe here at Granny's Pies. It has been enjoyed by pie fans for many years. It's Granny's favorite! We hope you'll find that this recipe is delicious and also easy to follow; it's a piece of cake pie!</p>
+    <p>This is our favorite recipe here at Granny's Pies. It has been enjoyed by pie fans for many years. It's Granny's favorite! We hope you'll find that this recipe is delicious and also easy to follow; it's a piece of <span class="delete">cake</span> pie!</p>
     <hr />
     <h2>USER COMMENTS</h2>
     <blockquote>
@@ -78,22 +80,24 @@
     </blockquote>
     <hr />
     <h2>LINKS</h2>
-    <a >Search for other lemon meringue pie recipes</a><br />
-    <a>Home</a>
+    <p>
+        <a href="http://www.google.com/search?q=lemon+meringue+pie+recipe&start=10" target="_blank">Search for other lemon meringue pie recipes</a><br />
+        <a href="index.html" >Home</a>
+    </p>
 </div>
-</body>
-<footer>
+<div id="footer">
         <p>
-            <a href="https://validator.w3.org/check/referer">
+            <a href="https://validator.w3.org/check/referer" target="_blank">
                 <img src="img/w3c-html.png" alt="Valid HTML5"/>
             </a>
-            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">
             <img src="img/vcss.gif" alt="Valid CSS" /></a>
         </p>
         <p>
-            <span>Copyright Â© 2012 Granny's Pies |</span><br />
-            <span>A Granny's Pies Production     |</span><br />
-            <span>All rights reserved            |</span><br />
+            <span>Copyright Â© 2012 Granny's Pies &nbsp;|</span><br />
+            <span>A Granny's Pies Production 	&nbsp;	&nbsp;&nbsp;&nbsp;&nbsp;|</span><br />
+            <span>All rights reserved 	&nbsp;	&nbsp;	&nbsp;	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</span><br />
         </p>
-</footer>
+</div>
+</body>
 </html>

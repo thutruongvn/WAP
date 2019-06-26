@@ -1,4 +1,64 @@
+h1 {
+    color: #A4A400;
+    background-color: #F0F0F0;
+    text-decoration: underline;
+    display: inline;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 20%;
+}
+h2 {
+    color: #A4A400;
+    background-color: #F0F0F0;
+    text-decoration: underline;
+    letter-spacing: 3pt;
+    display: inline;
+}
+#body {
+    background-image: url("../img/silverware.jpg");
+    background-color: #F0F0F0;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    font-family: Georgia Garamond serif;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+ul {
+    list-style-image: url("../img/pie_icon.gif")
+}
+#footer > p {
+    text-align: right;
+}
+#footer > p > span {
+    font-family: 'Courier New', Courier, monospace;
+}
+blockquote {
+    background-color: #FFFFA8;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    text-decoration: underline;
+  }
+  
+.tooltip .tooltiptext {
+visibility: hidden;
+width: 120px;
+background-color: rgb(184, 180, 180);
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 5px 0;
+/* Position the tooltip */
+position: absolute;
+z-index: 1;
+}
 
-header {
+.tooltip:hover .tooltiptext {
+visibility: visible;
+}
 
+.delete {
+    text-decoration: line-through;
 }
