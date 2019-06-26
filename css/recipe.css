@@ -1,19 +1,17 @@
-h1 {
+h1, h2 {
+    display: inline;
+    text-decoration: underline;
     color: #A4A400;
     background-color: #F0F0F0;
-    text-decoration: underline;
-    display: inline;
+}
+h1 {
     text-align: center;
     padding-left: 10px;
     padding-right: 10px;
     margin-left: 20%;
 }
 h2 {
-    color: #A4A400;
-    background-color: #F0F0F0;
-    text-decoration: underline;
     letter-spacing: 3pt;
-    display: inline;
 }
 #body {
     background-image: url("../img/silverware.jpg");
