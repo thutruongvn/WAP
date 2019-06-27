@@ -1,0 +1,72 @@
+.border {
+    border-width: 5px;
+    border: 5px solid;
+}
+.container {
+    background-color: white;
+    border: 10px solid white;
+    display: grid;
+    grid-template-areas: 'header header header header header'
+                         'nav body body body body';
+    /* position: relative; */
+}
+.header {
+    /* border-color: red; */
+    border: none;
+    background-color: #A8F0F0;
+}
+.header h1,.description{
+    text-align: right;
+}
+#header {    
+    grid-area: header;
+}
+#content {    
+    grid-area: body;
+    /* position: absolute; */
+}
+#nav {
+    grid-area: nav;
+    border-radius: 15px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color:  rgb(139, 243, 243);
+    /* position: absolute; */
+    float: left;
+    height: 160px;
+}
+.description {
+    /* border-color: orange; */
+    border: none;
+}
+.description > h2 {
+    font-size: 14pt;
+}
+.ddate {
+    border-bottom: 2px dashed blue;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.section {
+    background-color: #E8FBFB;
+    border: 4px solid #C2E9E9;
+    border-radius: 15px;
+    padding: 5px;
+    margin-top: 10px;
+    text-align: justify;
+    overflow: auto;
+}
+.floatImg {
+    float: right;
+}
+body {
+    align-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-image: url("../journal_files/background.gif");    
+}
+body > p {
+    clear: both;
+}
