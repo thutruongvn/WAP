@@ -44,7 +44,8 @@ body {
     position: relative;
     text-align: center;
     padding: 10px;
-    font-style: 24pt bold;
+    font-weight: bold;
+    font-size: 24pt;
     text-shadow: 3px 3px 8px #999999;
     font-family: Tahoma, Verdana, sans-serif;
 }
@@ -105,6 +106,7 @@ body {
 }
 .right ul {
     padding-inline-start: 0;
+    
 }
 .content .top {
     border-top-left-radius: 20px;
