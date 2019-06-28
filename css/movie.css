@@ -12,7 +12,8 @@
     .content .left {
         width: 550px;
         column-count: 2;
-        column-width: 258px;        
+        column-width: 258px;      
+        column-gap: 10px;  
     }
 }
 body {    
@@ -97,6 +98,7 @@ body {
 }
 .right dd {
     font-weight: normal;
+    padding-bottom: 10px;
 }
 .right li {
     list-style: none;
