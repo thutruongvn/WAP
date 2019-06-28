@@ -141,11 +141,11 @@ body {
 }
 .content .right {    
     position: absolute;
-    /* border-top-right-radius: 16px; */
+    border-top-right-radius: 16px;
     background-color:  #A2B964;
 }
 .right img {
-    /* border-top-right-radius: 16px; */
+    border-top-right-radius: 16px;
 }
 .content .bottom {
     border: 2px solid #A2B964;
