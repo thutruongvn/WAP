@@ -1,0 +1,140 @@
+@media screen and (min-width:600px) {
+    .rate {
+        font-size: 48pt;
+    }
+    .content .right {    
+        top: 80px;
+        right: 4px;
+        width: 250px;
+        margin-left: 10px;
+        height: 90%;
+    }
+    .content .left {
+        width: 550px;
+        column-count: 2;
+        column-width: 258px;        
+    }
+}
+body {    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 8pt;
+    align-content: center;
+    background-image: url("../img/TMNT/background.png");
+}
+.container {
+    margin-top: 50px;
+    position: relative;
+    align-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.topBanner {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    margin: auto 0;
+    text-align: center;
+    background-image: url("../img/TMNT/bannerbg.png");
+}
+.header {
+    /* border: 2px solid red; */
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    font-style: 24pt bold;
+    text-shadow: 3px 3px 8px #999999;
+    font-family: Tahoma, Verdana, sans-serif;
+}
+.content {    
+    border: 2px solid green;
+}
+.box {
+    border: 4px solid gray;
+    border-radius: 20px;
+}
+.reviewer {
+    display: inline-block;
+    width: 100%;
+}
+.reviewer .span {
+    font-size: 8pt;
+}
+.reviewer span:last-child {
+    font-style: italic;
+}
+.reviewer img {
+    margin-right: 5px;
+    float: left;
+}
+.review {
+    background-color: #E8DC9B;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 8px;
+}
+.review q {
+    font-size: 8pt;
+    font-weight: bold;
+}
+.review img {
+    vertical-align: middle;
+}
+.content .left {
+    display: inline-block;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+
+    /* border: 2px solid yellow; */
+}
+.right dt {
+    font-weight: bold;
+}
+.right dl {
+    padding: 10px;
+}
+.right dd {
+    font-weight: normal;
+}
+.right li {
+    list-style: none;
+}
+.right ul {
+    padding-inline-start: 0;
+}
+.content .top {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 16px;
+    background-image: url("../img/TMNT/rbg.png");
+    background-repeat: repeat-x;
+}
+.top img {
+    border-top-left-radius: 16px;
+    vertical-align: top;
+}
+.rate {
+    font-size: 36pt;
+    font-weight: bold;
+    color: red;
+}
+.content .right {    
+    position: absolute;
+    border-top-right-radius: 16px;
+    background-color:  #A2B964;
+}
+.right img {
+    border-top-right-radius: 16px;
+}
+.content .bottom {
+    border: 2px solid #A2B964;
+    background-color: #A2B964;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    text-align: center;
+}
+#checkingLinks {    
+    float: right;
+    bottom: 0px;
+}
