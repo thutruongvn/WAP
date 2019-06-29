@@ -13,7 +13,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="img/Apply for a Capital One Card_files/styles.css"
+      href="Apply for a Capital One Card_files/styles.css"
     />
     <link
       rel="icon"
@@ -40,7 +40,7 @@
                 target="new"
                 ><img
                   id="coHeaderLogo"
-                  src="img/Apply for a Capital One Card_files/cof-logo.png"
+                  src="./Apply for a Capital One Card_files/cof-logo.png"
                   alt="Capital One"
               /></a>
             </div>
@@ -109,7 +109,9 @@
                           </div>
                         </div>
                         <div class="row">
-                          <div class="date-input small-12 medium-6 columns required">
+                          <div
+                            class="date-input small-12 medium-6 columns required"
+                          >
                             <span
                               ><span
                                 ><label for="personal-date-of-birth"
@@ -125,14 +127,16 @@
                                     id="personal-date-of-birth"
                                     aria-required="true"
                                     class=""
-                                    type="date"
-                                    placeholder="MM/DD/YYYY"
-
+                                    type="tel"
+                                    value="MM/DD/YYYY"
                                   /></div></span
                             ></span>
                           </div>
-                          <div class="text-input small-12 medium-6 columns required">
-                            <span><p
+                          <div
+                            class="text-input small-12 medium-6 columns required"
+                          >
+                            <span
+                              ><p
                                 class="help"
                                 aria-label="Tell me more details about entering Mother’s Maiden Name"
                                 aria-describedby="sr-tooltip-personal-mothers-maiden-name"
@@ -179,7 +183,7 @@
                           <div class="plastic-img-center">
                             <img
                               id="cc-art"
-                              src="img/Apply for a Capital One Card_files/card-en.png"
+                              src="./Apply for a Capital One Card_files/card-en.png"
                               alt="Card Art"
                               class="card-art"
                             />
@@ -226,10 +230,8 @@
                             autocorrect="off"
                             id="personal-social-insurance-number"
                             class=""
-                            type="text"
-                            pattern="^\d{3}-\d{3}-\d{3}$"
-                            title="xxx-xxx-xxx with x is a number from 0-9"
-                            placeholder="___-___-___"
+                            type="tel"
+                            value="___-___-___"
                           /></div></span
                     ></span>
                   </div>
@@ -309,15 +311,14 @@
                                   aria-expanded="false"
                                   value=""
                                   autocomplete="off"
-                                />
-                              </div></span
+                                /></div></span
                           ></span>
                         </div>
                         <div class="text-input small-12 medium-4 columns">
                           <span
                             ><span
                               ><label for="contact-apartment"
-                                ><span>Zip code</span
+                                ><span>Suite/Apt. # </span
                                 ><span class="sub-label"
                                   ><span>(if Applicable)</span></span
                                 ></label
@@ -327,57 +328,6 @@
                                   autocomplete="off"
                                   autocorrect="off"
                                   id="contact-apartment"
-                                  maxlength="15"
-                                  class=""
-                                  type="text"
-                                  value=""
-                                /></div></span
-                          ></span>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div
-                          class="address-input small-12 medium-8 columns required"
-                        >
-                          <span
-                            ><span
-                              ><label for="city"
-                                ><span>City</span
-                                ><span class="show-for-sr"
-                                  ><span>Required</span></span
-                                ></label
-                              >
-                              <div class="validation-wrapper">
-                                <input
-                                  id="city"
-                                  type="text"
-                                  aria-autocomplete="both"
-                                  aria-owns="googleAutoCompleteResult"
-                                  placeholder=""
-                                  maxlength="120"
-                                  aria-required="true"
-                                  class=""
-                                  aria-expanded="false"
-                                  value=""
-                                  autocomplete="off"
-                                />
-                              </div></span
-                          ></span>
-                        </div>
-                        <div class="text-input small-12 medium-4 columns">
-                          <span
-                            ><span
-                              ><label for="state"
-                                ><span>State</span
-                                ><span class="show-for-sr"
-                                ><span>Required</span></span
-                                ></label
-                              >
-                              <div class="validation-wrapper">
-                                <input
-                                  autocomplete="off"
-                                  autocorrect="off"
-                                  id="state"
                                   maxlength="15"
                                   class=""
                                   type="text"
@@ -447,7 +397,7 @@
                               aria-required="true"
                               class=""
                               type="tel"
-                              placeholder="(___) ___-____"
+                              value="(___) ___-____"
                             /></div></span
                       ></span>
                     </div>
@@ -482,7 +432,7 @@
                     <span
                       ><div class="validation-wrapper">
                         <fieldset class="group-checkbox">
-                            <span class="undefined nobr"
+                          <span class="undefined nobr"
                             ><input
                               id="authorized-user.confirmation"
                               type="checkbox"
@@ -808,11 +758,24 @@
                 id="entry-privacy"
                 class="row column privacy-drawers-wrapper"
               >
+                <div class="entry-review-consent">
+                  <span
+                    ><span
+                      >By selecting “Review My Application”, you confirm that
+                      you have read, understood and agree to the above
+                      <a
+                        href="https://applynow.capitalone.ca/?filter=all&amp;productId=5856#entry-disclosures"
+                        ><span>Important Disclosures</span></a
+                      >.</span
+                    ></span
+                  >
+                </div>
               </section>
               <div class="row align-center">
                 <div class="small-10 medium-8 columns">
-                  <input id="entry-review-button" type="Submit" class="button" value="Submit"/>
-                  </input>
+                  <button id="entry-review-button" type="button" class="button">
+                    <span>Review My Application</span>
+                  </button>
                 </div>
               </div>
             </form>
@@ -856,7 +819,7 @@
                   target="_blank"
                   ><img
                     id="norton-logo"
-                    src="img/Apply for a Capital One Card_files/norton-logo.png"
+                    src="./Apply for a Capital One Card_files/norton-logo.png"
                     alt="Norton SSL protection"
                 /></a>
                 <p>
@@ -877,7 +840,7 @@
                 target="new"
                 ><img
                   id="coFooterLogo"
-                  src="img/Apply for a Capital One Card_files/cof-logo.png"
+                  src="./Apply for a Capital One Card_files/cof-logo.png"
                   alt="Capital One"
               /></a>
               <p>
@@ -908,7 +871,7 @@
         width="0"
         height="0"
         alt=""
-        src="img/Apply for a Capital One Card_files/0"
+        src="./Apply for a Capital One Card_files/0"
       />
     </div>
     <div
@@ -921,7 +884,7 @@
         width="0"
         height="0"
         alt=""
-        src="img/Apply for a Capital One Card_files/0(1)"
+        src="./Apply for a Capital One Card_files/0(1)"
       />
     </div>
     <div
