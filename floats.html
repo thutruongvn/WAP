@@ -18,6 +18,17 @@
 <button id="size-14">14</button>
 <button id="size-18">18</button>
 
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Example for div modal box</p>
+    </div>
+  
+</div>
+  
 <!--   
 <form action="https://www.google.com/search" method="GET">
     <select name="q" multiple>
@@ -52,6 +63,28 @@
     </form> -->
     
 <script>
+  
+var modal = document.getElementById("myModal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+window.onload = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 //   function foo(x, y){     
 //     return function(z){         
 //       return x+y+z;     
@@ -64,19 +97,19 @@
   
 //  var result = bar(foo(5,5)); 
 //  alert(result);
-function Employee(){
-this.company = 'MUM';
-year = '2016';
-}
-var emp = new Employee(); // {company: "MUM"} – no year!
-Employee.prototype.intro = function(){
-return 'Hi I work for ' + this.company;
-}
-emp.intro(); // "Hi I work for MUM"
-Employee.prototype.city = "FF"
-console.log(emp);
-Employee.age = 22
-console.log(emp);
+// function Employee(){
+// this.company = 'MUM';
+// year = '2016';
+// }
+// var emp = new Employee(); // {company: "MUM"} – no year!
+// Employee.prototype.intro = function(){
+// return 'Hi I work for ' + this.company;
+// }
+// emp.intro(); // "Hi I work for MUM"
+// Employee.prototype.city = "FF"
+// console.log(emp);
+// Employee.age = 22
+// console.log(emp);
 // var address = {
 // city: "FF"
 // };
@@ -144,22 +177,22 @@ console.log(emp);
 //    obj.bar(); 
 //    })(5,7); 
 
-  let module = (function(){ 
-    x=10; 
-    let outer1="outer1"; 
-    function f1(arg1, arg2){ 
-        let func1 = function(){ 
-          return arg2;
-          }; 
-        // return func1;
-    } 
-    // let a = f1(x,outer1);
-console.log(f1);
-    return outer1;
-})()
-var abbb = new f1(1,2);
-console.log(abbb);
-console.log(module);
+//   let module = (function(){ 
+//     x=10; 
+//     let outer1="outer1"; 
+//     function f1(arg1, arg2){ 
+//         let func1 = function(){ 
+//           return arg2;
+//           }; 
+//         // return func1;
+//     } 
+//     // let a = f1(x,outer1);
+// console.log(f1);
+//     return outer1;
+// })()
+// var abbb = new f1(1,2);
+// console.log(abbb);
+// console.log(module);
   // if(x) {
     // alert(x);
   // }
