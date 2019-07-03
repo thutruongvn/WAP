@@ -13,6 +13,11 @@
         <div class="box"></div>
         <div class="box"></div>
     </div>
+    <p>Some paragraph text</p>
+<button id="size-12">12</button>
+<button id="size-14">14</button>
+<button id="size-18">18</button>
+
 <!--   
 <form action="https://www.google.com/search" method="GET">
     <select name="q" multiple>
@@ -47,31 +52,125 @@
     </form> -->
     
 <script>
+//   function foo(x, y){     
+//     return function(z){         
+//       return x+y+z;     
+//       }; 
+//       } 
+ 
+//  function bar (f){     
+//    return f(10); 
+//    } 
+  
+//  var result = bar(foo(5,5)); 
+//  alert(result);
+function Employee(){
+this.company = 'MUM';
+year = '2016';
+}
+var emp = new Employee(); // {company: "MUM"} – no year!
+Employee.prototype.intro = function(){
+return 'Hi I work for ' + this.company;
+}
+emp.intro(); // "Hi I work for MUM"
+Employee.prototype.city = "FF"
+console.log(emp);
+Employee.age = 22
+console.log(emp);
+// var address = {
+// city: "FF"
+// };
+// var person = {
+// first: 'Default',
+// last: 'Default',
+// state: "Iowa",
+// greet: function() { return 'Hi' + this.first; }, //use this in functions
+// __proto__: address
+// }
+// var jim = Object.create(person);
+// jim.age = 10;
+// console.log(jim.age);
+// console.log(jim.state);
+// console.log(jim.city);
+// console.log(jim['first']); // Default - Inheritance
+// console.log(jim.first); // Default - Inheritance
+// console.log(jim.hasOwnProperty('first')); // false
+// // jim.first = 'Jim';
+// jim['first'] = 'Jenna';
+// console.log(jim); // {first: 'Jim'} – No last & greet()
+// jim['city'] = 'DSM';
+// console.log(jim); // {first: 'Jim'} – No last & greet()
+// // delete jim.city;
+// delete address.city;
+// console.log(jim); // {first: 'Jim'} – No last & greet()
+// person.state = 'ABC';
+// console.log(jim.hasOwnProperty('first')); // true
+// console.log(jim); // {first: 'Jim'} – No last & greet()
+// console.log(jim.greet()); // Hi Jim 
+// var aaa = new Date();
+// var a = {
+// x: 10,
+// calculate: function (z) {
+// return this.x + this.y + z;
+// }
+// };
+// var b = {
+// y: 20,
+// __proto__: a
+// };
+// console.log(b.x);
+// var c = {
+// y: 30,
+// __proto__: a
+// };
+// b.x=15;
+// // call the inherited method
+// console.log(b.calculate(30)); // 60
+// c.calculate(40); // 80
+//  (function(x,y){   
+//     // "use strict";    
+//     console.log(this); 
+ 
+//    console.log(x,y); 
+ 
+//    const obj = {
+//      x:2, 
+//      foo:function(){
+//        console.log(this.x)}
+//        };    
+//        obj.foo(); 
+ 
+//    obj.bar = () =>console.log(this.x);    
+//    obj.bar(); 
+//    })(5,7); 
+
+  let module = (function(){ 
+    x=10; 
+    let outer1="outer1"; 
+    function f1(arg1, arg2){ 
+        let func1 = function(){ 
+          return arg2;
+          }; 
+        // return func1;
+    } 
+    // let a = f1(x,outer1);
+console.log(f1);
+    return outer1;
+})()
+var abbb = new f1(1,2);
+console.log(abbb);
+console.log(module);
   // if(x) {
     // alert(x);
   // }
-  var x= function (y) {return y*y;};
-  // myFunction(3);
-  function myFunction(p1) {
-    alert(p1 * p1);
-  }
-console.log(a);
-  var a = 100;
-  function hoist() {
-  a = 20;
-  var b = 100;
-}
-
-hoist();
-
-console.log(a); 
-/* 
-Accessible as a global variable outside hoist() function
-Output: 20
-*/
-
-console.log(b); 
-  // document.getElementById("outer").innerHTML = myFunction(4);
+//   function makeSizer(size) {
+// // return function() {
+// document.body.style.fontSize = size + 'px';
+// // };
+// }
+// document.getElementById('size-12').onclick = makeSizer(12);
+// document.getElementById('size-14').onclick = makeSizer(14);
+// document.getElementById('size-18').onclick = makeSizer(18);
   </script>
 </body>
 </html>
