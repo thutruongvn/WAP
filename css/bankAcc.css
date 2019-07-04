@@ -17,6 +17,9 @@
 }
 .container {    
     box-sizing: inherit;
+    font-family: Optimist,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
 }
 .fullWidth {
     width: 100%;
