@@ -3,12 +3,23 @@
   <head>
     <link href="css/floats.css" type="text/css" rel="stylesheet">  
     <script>
-      var x = 5
-      console.log(x)
-      setTimeout(console.log("hi"), 1) // immediately invoke
-      setTimeout(function(){console.log("hi")}, 1) // waiting and run after all other line run
-      console.log("hello")
-      $("#size-12").click(function(){console.log("btn12 clicked")})
+      var makeCounter = function() {
+var privateCounter = 0; //private data
+function changeBy(val) { //private inner function
+privateCounter += val;
+}
+return { // three public functions are closures
+increment: function() { changeBy(1); },
+decrement: function() { changeBy(-1); },
+value: function() { return privateCounter; }
+}
+};
+var counter1 = makeCounter();
+var counter2 = makeCounter();
+alert(counter1.value()); /* Alerts 0 */
+counter1.increment();
+alert(counter1.value()); /* Alerts 1 */
+alert(counter2.value());
       </script>
     <script src="lib/jquery-3.4.1.min.js" ></script>
   </head>
