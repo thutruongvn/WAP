@@ -1,9 +1,9 @@
 "use strict";
 $( function() {
-    init();
-    shuffleAlg();
     $("#puzzlearea div").click(clickPuzzle);
     $("#shufflebutton").click(shuffleAlg);
+    init();
+    shuffleAlg();
 });
 function shuffleAlg() {
     const moveTimes = Math.floor(Math.random() * 50) + 10;
