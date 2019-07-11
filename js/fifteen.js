@@ -5,7 +5,7 @@ $( function() {
     $("#shufflebutton").click(shuffleAlg);
 });
 function shuffleAlg() {
-    const moveTimes = Math.floor(Math.random() * 100) + 6;
+    const moveTimes = Math.floor(Math.random() * 50) + 10;
     for(let i = 0; i < moveTimes; i++) {
         const pList = $("#puzzlearea .movablepiece");
         const randomIndex = Math.floor(Math.random() * pList.length);
