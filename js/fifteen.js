@@ -1,6 +1,7 @@
 "use strict";
 $( function() {
     init();
+    shuffleAlg();
     $("#puzzlearea div").click(clickPuzzle);
     $("#shufflebutton").click(shuffleAlg);
 });
