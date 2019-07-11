@@ -7,9 +7,16 @@ $( function() {
         // e.css("background-color", "#ff8888");
         // $("#boundary1").css("background-color", "#ff8888");
         if(start) {
-            $(".boundary").addClass("youlose");
+            $(".boundary").addClass("youlose");            
+            $("#status").text("Sorry, you lost. :[");
         }
 
+    });
+    $("#maze").mouseleave( () => {
+        if(start) {
+            $(".boundary").addClass("youlose");    
+            $("#status").text("Sorry, you lost. :[");
+        }
     });
 
     $("#start").click( () => {
