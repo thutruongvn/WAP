@@ -38,7 +38,7 @@
       </div>
     </div>
     <div class="column fullWidth row">
-      <label><input type="checkbox" name="chkRemember" value="<%= !userName.equals("") %>"/> Remember me</label>
+      <label><input type="checkbox" name="chkRemember" /> Remember me</label>
 <%--      value="<%= !userName.equals("") %>"--%>
     </div>
     <div class="column fullWidth row">

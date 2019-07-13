@@ -17,9 +17,15 @@ public class LoginServlet extends HttpServlet {
         String ps = request.getParameter("txtPassword");
         User user = new User(un, ps);
         if(UserAccess.validateAccount(user)) {
-            Cookie loginCookie = new Cookie("username",user.getUsername());
-            loginCookie.setMaxAge(30*24*60*60); //1 month
+            Boolean remember = request.getParameterValues("chkRemember") != null;
+            String cUsername = remember ? un : "";
+            int cTimeout = remember ? 30*24*60*60 : 0;
+            Cookie loginCookie = new Cookie("username", cUsername);
+            loginCookie.setMaxAge(cTimeout);
             response.addCookie(loginCookie);
+            Cookie promoCookie = new Cookie("promo", "$100");
+            promoCookie.setMaxAge(30*24*60*60);//1 month
+            response.addCookie(promoCookie);
             HttpSession session = request.getSession();
             session.setAttribute("currentUser", user);
             PrintWriter out = response.getWriter();
