@@ -9,6 +9,9 @@ body {
     border: none;
     text-align: center;
 }
+.bottom-space {
+    margin-bottom: 10px;
+}
 .icon-add {
     content: "\e650";
 }

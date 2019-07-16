@@ -70,3 +70,9 @@
         </div>
     </div>
 </nav>
+
+<c:if test="${sessionScope['err_msg_checkout'] != null}">
+    <div class="alert alert-danger" role="alert">
+        <c:out value="${sessionScope['err_msg_checkout']}"/>
+    </div>
+</c:if>

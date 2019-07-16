@@ -33,7 +33,7 @@
                 <c:forEach items="${cartItems}" var="item">
                     <tr class="item" id="item_${item.item.id}">
                         <td><input class="check" type="checkbox" value="${item.item.id}"></td>
-                        <td class="muted center_text"><a href="productdetails?id=${item.item.id}"><img src="<c:url value="/resources/img/${item.item.img}" />" class="img-thumbnail width100" alt="${item.item.name}"></a></td>
+                        <td class="muted center_text"><a href="/"><img src="<c:url value="/resources/img/${item.item.img}" />" class="img-thumbnail width100" alt="${item.item.name}"></a></td>
                         <td>${item.item.name}</td>
                         <td><input class="qty" type="number" placeholder="1" class="input-mini" value="${item.quantity}" min="1" id="quantity_${item.item.id}"></td>
                         <td class="price format-money">${item.item.price}</td>
@@ -63,9 +63,9 @@
                 </button>
             </div>
             <div class="col-sm-5 right">
-                <button type="button" class="btn btn-info" id="btnContinueShopping">
+                <a href="/" class="btn btn-info" id="btnContinueShopping">
                     <span class="fa fa-forward"></span> Continue shopping
-                </button>
+                </a>
             </div>
             <div class="col-sm-2 right">
                 <button type="button" class="btn btn-primary" id="btnCheckout">

@@ -29,7 +29,7 @@
 <body>
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom fixed-top shadow-sm p-3 mb-5">
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom fixed-top shadow-sm mb-5">
     <div class="container">
 <%--        <a href="/" class="logo">Home</a>--%>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -70,3 +70,9 @@
         </div>
     </div>
 </nav>
+
+<c:if test="${sessionScope['err_msg_checkout'] != null}">
+    <div class="alert alert-danger" role="alert">
+        <c:out value="${sessionScope['err_msg_checkout']}"/>
+    </div>
+</c:if>

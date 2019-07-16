@@ -25,7 +25,7 @@
     <%--      <c:url value='shopping-cart' var="linkAddToCart">--%>
     <%--        <c:param name="productId" value="${product.productId}"/>--%>
     <%--      </c:url>--%>
-    <div class="card">
+    <div class="card bottom-space">
       <div class="row no-gutters">
         <div class="col-auto">
           <img src="<c:url value="/resources/img/${product.img}" />" class="img-fluid" alt="">

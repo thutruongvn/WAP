@@ -7,21 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc218328-39bc-4e6f-9419-42c911075150" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../servlet3assignment/.idea/artifacts/servlet3assignment_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlet3assignment/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlet3assignment/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlet3assignment/src/main/java/com/shopping/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlet3assignment/src/main/java/com/shopping/controller/ShoppingCartServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlet3assignment/src/main/java/com/shopping/dao/ProductAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlet3assignment/src/main/java/com/shopping/model/CartItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlet3assignment/src/main/java/com/shopping/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlet3assignment/src/main/java/com/shopping/model/ShoppingCart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlet3assignment/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlet3assignment/web/footer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlet3assignment/web/header.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlet3assignment/web/resources/css/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../servlet3assignment/web/shoppingCart.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../servlet3assignment/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../servlet3assignment/src/main/java/com/shopping/controller/CheckoutController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../servlet3assignment/src/main/java/com/shopping/dao/ShoppingCartAccess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../servlet3assignment/web/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servlet3assignment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../servlet3assignment/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servlet3assignment/src/main/java/com/shopping/controller/ShoppingCartServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../servlet3assignment/src/main/java/com/shopping/controller/ShoppingCartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servlet3assignment/target/classes/com/shopping/controller/ShoppingCartServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servlet3assignment/target/servlet-3-assignment-1.0-SNAPSHOT/WEB-INF/classes/com/shopping/controller/ShoppingCartServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servlet3assignment/target/servlet-3-assignment-1.0-SNAPSHOT/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../servlet3assignment/target/servlet-3-assignment-1.0-SNAPSHOT/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servlet3assignment/target/servlet-3-assignment-1.0-SNAPSHOT/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../servlet3assignment/target/servlet-3-assignment-1.0-SNAPSHOT/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servlet3assignment/target/servlet-3-assignment-1.0-SNAPSHOT/product.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../servlet3assignment/target/servlet-3-assignment-1.0-SNAPSHOT/product.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servlet3assignment/target/servlet-3-assignment-1.0-SNAPSHOT/resources/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/../servlet3assignment/target/servlet-3-assignment-1.0-SNAPSHOT/resources/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servlet3assignment/target/servlet-3-assignment-1.0-SNAPSHOT/resources/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/../servlet3assignment/target/servlet-3-assignment-1.0-SNAPSHOT/resources/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servlet3assignment/target/servlet-3-assignment-1.0-SNAPSHOT/shoppingCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../servlet3assignment/target/servlet-3-assignment-1.0-SNAPSHOT/shoppingCart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servlet3assignment/web/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../servlet3assignment/web/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../servlet3assignment/web/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../servlet3assignment/web/header.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,11 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+            <state relative-caret-position="464">
+              <caret line="46" column="9" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="46" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -66,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/LoginServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+            <state relative-caret-position="221">
+              <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -140,15 +142,6 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/artifacts/servlet2_war_exploded.xml" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
     <option name="y" value="-12" />
@@ -191,12 +184,6 @@
               <item name="servlet2" type="b2602c69:ProjectViewProjectNode" />
               <item name="servlet2" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="servlet2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="servlet2" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -313,12 +300,12 @@
       <updated>1562899915908</updated>
       <workItem from="1562899919234" duration="13020000" />
       <workItem from="1562990370685" duration="3356000" />
-      <workItem from="1563246958959" duration="792000" />
+      <workItem from="1563246958959" duration="1987000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17168000" />
+    <option name="totallyTimeSpent" value="18363000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -463,13 +450,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/main.jsp" />
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/AuthenFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -513,8 +493,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/LoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+        <state relative-caret-position="221">
+          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="46" column="9" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="46" selection-end-column="9" />
         </state>
       </provider>
     </entry>
