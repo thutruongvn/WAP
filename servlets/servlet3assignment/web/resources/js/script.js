@@ -123,5 +123,48 @@ $(function(){
 		});
 	}
 
+    // let success = false;
+    $(".payment-form").submit(function (e) {
+        e.preventDefault();
+        let order = {};
+        order.fullName = $("#fullName").val();
+        order.shippingAddress = $("#address").val();
+        order.paymentMethod = $("[name='payment']:checked").val();
+        order.comment = $("#comment").val();
+
+        // console.log("order", order);
+
+        $.post("checkout", {
+            order: JSON.stringify(order)
+        }).done(orderSuccess).fail(function () {
+            alert("Error! Please contact Administrator");
+        });
+    });
+
+    function orderSuccess(data) {
+        if (data.indexOf("success") > -1) {
+            alert(data)
+            $(location).attr("href", "/");
+        } else {
+            alert("Error! Please contact Administrator");
+            $(location).attr("href", "/");
+        }
+        // console.log(data);
+    }
+    // $(".close").click(function () {
+    //     $("#myModal").css("display", "none");
+    // });
+    // function error(err) {
+    //     // console.log(err);
+    //     success = false;
+    // };
+
+    // $('#myModal').on('hidden.bs.modal', function (e) {
+    //     // console.log("Hide");
+    //     if(success) {
+    //         $(location).attr("href", "/");
+    //     }
+    // });
+
 });
 

@@ -78,13 +78,13 @@
 </nav>
 
 <c:if test="${sessionScope['success_msg_response'] != null}">
-    <div class="alert alert-success" role="alert">
+    <div class="alert alert-success below-banner" role="alert">
         <c:out value="${sessionScope['success_msg_response']}"/>
             <%--        <span>If you do not have login access, <a href="/register">click here</a> to create your account.</span>--%>
     </div>
 </c:if>
 <c:if test="${sessionScope['err_msg_checkout'] != null}">
-    <div class="alert alert-danger" role="alert">
+    <div class="alert alert-danger below-banner" role="alert">
         <c:out value="${sessionScope['err_msg_checkout']}"/>
             <%--        <span>If you do not have login access, <a href="/register">click here</a> to create your account.</span>--%>
     </div>

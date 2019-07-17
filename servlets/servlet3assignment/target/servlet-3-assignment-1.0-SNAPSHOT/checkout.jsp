@@ -62,4 +62,22 @@
     </div>
 </c:if>
 </div>
+
+<%--<div id="myModal" class="modal fade">--%>
+<%--    <div class="modal-dialog" role="document">--%>
+<%--        <div class="modal-content">--%>
+<%--            <span class="close">&times;</span>--%>
+<%--            <div class="modal-header">--%>
+<%--                <h5 class="modal-title">Notice</h5>--%>
+<%--            </div>--%>
+<%--            <div class="modal-body">--%>
+<%--                <p id="alertBody">Thank you for your ordering. We will deliver your order as soon as possible.</p>--%>
+<%--            </div>--%>
+<%--            <div class="modal-footer">--%>
+<%--                <a href="/" class="btn btn-secondary" data-dismiss="modal"><span class="fa fa-forward"></span> Continue shopping</a>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--</div>--%>
+
 <jsp:include page="footer.jsp"></jsp:include>

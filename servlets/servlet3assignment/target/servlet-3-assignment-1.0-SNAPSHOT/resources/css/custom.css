@@ -150,6 +150,9 @@ div.card > a > img {
 .display-none {
     display: none;
 }
+.display-block {
+    display: block;
+}
 .sale-price {
     color: orangered;
 }

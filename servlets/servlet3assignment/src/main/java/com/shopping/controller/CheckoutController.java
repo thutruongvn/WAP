@@ -3,8 +3,7 @@ package com.shopping.controller;
 import com.google.gson.Gson;
 import com.shopping.dao.ShoppingCartAccess;
 import com.shopping.dao.UserAccess;
-import com.shopping.model.ShoppingCart;
-import com.shopping.model.User;
+import com.shopping.model.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,6 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 
 @WebServlet(name = "CheckoutController", urlPatterns = {"/checkout"})
 public class CheckoutController extends HttpServlet {
@@ -25,14 +27,8 @@ public class CheckoutController extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-//        HttpSession session = req.getSession(true);
-//        if(session != null && session.getAttribute("shoppingCart") != null) {
-//            shoppingCart = (ShoppingCart) session.getAttribute("shoppingCart");
-//        } else {
-//            session.setAttribute("shoppingCart", shoppingCart);
-//        }
         shoppingCartDao.setShoppingCart(req);
+        shoppingCart = shoppingCartDao.getShoppingCart(req);
         userDAO = (UserAccess)getServletContext().getAttribute("userDAO");
         super.service(req, resp);
     }
@@ -57,11 +53,29 @@ public class CheckoutController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        req.getSession().setAttribute("shoppingCart", null);
-        req.setAttribute("numItems", 0);
-        shoppingCart = null;
-        resp.getWriter().print("Checkout success.");
-        req.getSession().setAttribute("success_msg_response", "Checkout order successfully. Thank you!");
+        if(req.getParameter("order") != null){
+            Order order = mapper.fromJson(req.getParameter("order"), Order.class);
+            User user = userDAO.getUserByUsername(req.getSession().getAttribute("user_info").toString());
+            order.setUsername(user.getUsername());
+            List<OrderItem> orderItems = new ArrayList<>();
+            for(CartItem cart: shoppingCart.getItems()){
+                OrderItem orderItem = new OrderItem(UUID.randomUUID().toString(), cart.getQuantity(), cart.getItem());
+                orderItems.add(orderItem);
+            }
+            order.setOrderItems(orderItems);
+
+            req.getSession().setAttribute("shoppingCart", null);
+            req.setAttribute("numItems", 0);
+            shoppingCart = null;
+            resp.getWriter().print("Checkout success for " + user.getUsername() + " with the total order amount $" + order.getTotal()
+                                    + "\n We will deliver your package as soon as possible. Thank you.");
+        } else {
+            resp.getWriter().print("Error: something went wrong." );
+        }
+//        req.getSession().setAttribute("shoppingCart", null);
+//        req.setAttribute("numItems", 0);
+//        shoppingCart = null;
+//        req.getSession().setAttribute("success_msg_response", "Checkout order successfully. Thank you!");
 
     }
 }
