@@ -143,7 +143,7 @@ $(function(){
 
     function orderSuccess(data) {
         if (data.indexOf("success") > -1) {
-            alert(data)
+            alert(data);
             $(location).attr("href", "/");
         } else {
             alert("Error! Please contact Administrator");
