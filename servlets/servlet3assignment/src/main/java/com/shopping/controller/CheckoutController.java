@@ -41,7 +41,7 @@ public class CheckoutController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         if(req.getSession().getAttribute("user_info") == null) {
-            req.getSession().setAttribute("err_msg_checkout", "You need to log in or register first.");
+            req.getSession().setAttribute("err_msg_checkout", "Please sign in to checkout your order.");
 
             resp.sendRedirect("/login");
         }

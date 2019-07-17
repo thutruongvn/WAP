@@ -4,6 +4,7 @@ import com.shopping.dao.ProductAccess;
 import com.shopping.dao.ShoppingCartAccess;
 import com.shopping.model.Product;
 import com.shopping.model.ShoppingCart;
+import com.shopping.utils.SessionHelper;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -39,6 +40,7 @@ public class ShoppingCartController extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        SessionHelper.clearMessage(request);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("shoppingCart.jsp");
         ShoppingCart shoppingCart = shoppingCartDAO.getShoppingCart(request);
         request.setAttribute("cartItems", shoppingCart.getItems());

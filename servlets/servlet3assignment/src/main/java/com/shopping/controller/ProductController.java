@@ -3,6 +3,7 @@ package com.shopping.controller;
 import com.google.gson.Gson;
 import com.shopping.dao.ProductAccess;
 import com.shopping.model.Product;
+import com.shopping.utils.SessionHelper;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -27,6 +28,7 @@ public class ProductController extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        SessionHelper.clearMessage(request);
         request.setAttribute("products", dao.getAllProducts());
         RequestDispatcher view = request.getRequestDispatcher("product.jsp");
         view.forward(request, response);

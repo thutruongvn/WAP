@@ -20,7 +20,7 @@
 <%--  <body>--%>
 <jsp:include page="header.jsp"></jsp:include>
 
-<div class="container">
+<div class="container below-banner">
   <c:forEach items="${products}" var="product">
     <%--      <c:url value='shopping-cart' var="linkAddToCart">--%>
     <%--        <c:param name="productId" value="${product.productId}"/>--%>
@@ -34,7 +34,12 @@
           <div class="card-block px-2">
             <h4 class="card-title">${product.name}</h4>
             <p class="card-text">
-              <h5>Price: $${product.price}</h5>
+              <c:if test="${(product.price) < 15}">
+                <h5>Price: <span class="sale-price">$${product.price}</span> </h5>
+              </c:if>
+              <c:if test="${(product.price) >= 15}">
+                <h5>Price: <span class="">$${product.price}</span> </h5>
+              </c:if>
               Qty: <span class="icon-reduce">&minus;</span><input type="number" class="qty-input" value="${qty=0}" /><span class="icon-add">&plus;</span>
             </p>
             <button type="button" id="${product.id}" class="btn btn-primary addToCart">Add to cart</button>

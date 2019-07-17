@@ -15,6 +15,42 @@ $(function(){
 
 	$("#btnCheckout").click(checkout);
 
+	// $("#btnLogin").click(login);
+
+	$("#btnRegister").click(register);
+
+	function register() {
+		var newusername = $("input[name='newUsername']").val();
+		var newpass = $("input[name='newPassword']").val();
+		var cfpass = $("input[name='cfPassword']").val();
+		if (newpass !== cfpass) {
+			$("#registerErrMsg").text("Password confirmation is wrong.");
+			$("#registerErrMsg").parent().removeClass("display-none");
+			return false;
+		}
+		$.post("register", {username: newusername, password: newpass}, "json")
+			.done(function (response) {
+				console.log("Register new account successful.");
+			}).fail(function () {
+			console.log("Failt to create new account.");
+
+		});
+	}
+	// $("input[name='newPassword']").onchange = validatePassword;
+	// $("input[name='cfPassword']").onkeyup = validatePassword;
+	// function validatePassword() {
+	// 	var newpass = $("input[name='newPassword']");
+	// 	var cfpass = $("input[name='cfPassword']");
+	// 	if(newpass.val() !== cfpass.val()) {
+	// 		cfpass.setCustomValidity("Passwords Don't Match");
+	// 	} else {
+	// 		cfpass.setCustomValidity('');
+	// 	}
+	// }
+
+	// function login() {
+	// 	// var username =
+	// }
 	function checkout() {
 		// console.log("checkout click");
 		if ($(".item").length > 0) {
