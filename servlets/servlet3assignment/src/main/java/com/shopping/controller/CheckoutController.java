@@ -57,21 +57,11 @@ public class CheckoutController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        if(req.getParameter("order") != null){
-//            Order order = mapper.fromJson(req.getParameter("order"), Order.class);
-//            User user = userDAO.getUserByUsername(req.getSession().getAttribute("user_info").toString());
-//            order.setUserId(user.getId());
-//            List<OrderItem> orderItems = new ArrayList<>();
-//            for(CartItem cart: shoppingCart.getItems()){
-//                OrderItem orderItem = new OrderItem(UUID.randomUUID().toString(), cart.getQuantity(), cart.getItem());
-//                orderItems.add(orderItem);
-//            }
-//            order.setOrderItems(orderItems);
-//
-//            req.getSession().setAttribute("shoppingCart", null);
-//            req.setAttribute("numItems", 0);
-//            shoppingCart = null;
-        }
-        resp.getWriter().print("success");
+        req.getSession().setAttribute("shoppingCart", null);
+        req.setAttribute("numItems", 0);
+        shoppingCart = null;
+        resp.getWriter().print("Checkout success.");
+        req.getSession().setAttribute("success_msg_response", "Checkout order successfully. Thank you!");
+
     }
 }

@@ -8,7 +8,7 @@
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <jsp:include page="header.jsp"></jsp:include>
-<div class="container">
+<div class="container below-banner">
     <%--<h1>Login page</h1>--%>
     <%--&lt;%&ndash;<blockquote>hint: test1/123, test2/123, test3/123</blockquote>&ndash;%&gt;--%>
     <%--<%--%>

@@ -1,28 +1,91 @@
 $(function(){
 	$(".icon-reduce").click(function (e) {
-		var qty = $(this).parent().find("input");
+		let qty = $(this).parent().find("input");
 		qty.val(function (i, old) {
 			return parseInt(old) - 1;
 		});
+		// const trParents = $(this).parentsUntil("tbody");
+        // 		// if(trParents != null && trParents.length > 1) {
+        //         //     updateTotal(trParents[1]);
+        //         // }
 	});
 	$(".icon-add").click(function (e) {
-		var qty = $(this).parent().find("input");
+		let qty = $(this).parent().find("input");
 		qty.val(function (i, old) {
 			return parseInt(old) + 1;
 		});
+        // const trParents = $(this).parentsUntil("tbody");
+        // if(trParents != null && trParents.length > 1) {
+        //     updateTotal(trParents[1]);
+        // }
 	});
+    $("input[id^='quantity_']").change(function () {
+        let qty = $(this).val();
+        // let oldVal = $(this).default();
+        const trParents = $(this).parentsUntil("tbody");
+        if(trParents != null && trParents.length > 1) {
+            updateTotal(trParents[1], qty);
+        }
+    });
+    function updateTotal(eTR, qty, oldQty) {
+        // const qty = $(eTR).find("input[id^='quantity_']").val();
+        const price = $($(eTR).find("span").filter(".price")[0]).text();
+        const total = $(eTR).find("span").filter(".total")[0];
+        $(total).text(qty*price);
+        if(oldQty) {
+            const change = qty*price - oldQty*price;
+            const sumTotal = $(eTR).parent().find("span").filter("#sum");
+            const sum = $(sumTotal).text();
+            $(sumTotal).text(sum + change);
+        }
+    }
+	$('#btnRemove, #btnUpdate').click(updateShoppingCart);
+
+    function updateShoppingCart() {
+
+        let action = $(this).val();
+        let productIds = "";
+        let updateIds = "";
+        let product = {};
+        let data = {"product": product};
+        $('input[type=checkbox]').each(function () {
+            let productId = $(this).val();
+            updateIds += productId + ",";
+            product[""+productId] = $("#quantity_"+productId).val();
+            if (this.checked) {
+                productIds += productId + ",";
+                product[""+productId] = $("#quantity_"+productId).val();
+
+            }
+        });
+        let url = "shopping-cart?ids=";
+        url += (action === "remove") ? productIds : updateIds;
+        url += "&action=" + action;
+
+        if(productIds !== "" || updateIds !== "") {
+            $.ajax({
+                url: url,
+                type: 'put',
+                async: false,
+                data: JSON.stringify(product),
+                success: reloadPage,
+                contentType: 'json'
+            });
+        }
+    }
+    function reloadPage(){
+        location.reload();
+    }
 	$(".addToCart").click(addToCart);
 
 	$("#btnCheckout").click(checkout);
 
-	// $("#btnLogin").click(login);
-
 	$("#btnRegister").click(register);
 
 	function register() {
-		var newusername = $("input[name='newUsername']").val();
-		var newpass = $("input[name='newPassword']").val();
-		var cfpass = $("input[name='cfPassword']").val();
+		let newusername = $("input[name='newUsername']").val();
+		let newpass = $("input[name='newPassword']").val();
+		let cfpass = $("input[name='cfPassword']").val();
 		if (newpass !== cfpass) {
 			$("#registerErrMsg").text("Password confirmation is wrong.");
 			$("#registerErrMsg").parent().removeClass("display-none");
@@ -36,21 +99,7 @@ $(function(){
 
 		});
 	}
-	// $("input[name='newPassword']").onchange = validatePassword;
-	// $("input[name='cfPassword']").onkeyup = validatePassword;
-	// function validatePassword() {
-	// 	var newpass = $("input[name='newPassword']");
-	// 	var cfpass = $("input[name='cfPassword']");
-	// 	if(newpass.val() !== cfpass.val()) {
-	// 		cfpass.setCustomValidity("Passwords Don't Match");
-	// 	} else {
-	// 		cfpass.setCustomValidity('');
-	// 	}
-	// }
 
-	// function login() {
-	// 	// var username =
-	// }
 	function checkout() {
 		// console.log("checkout click");
 		if ($(".item").length > 0) {
@@ -63,8 +112,8 @@ $(function(){
 		}
 	}
 	function addToCart(){
-		var productId = $(this).attr('id');
-		var qty = $(this).parent().find("input").val();
+		let productId = $(this).attr('id');
+		let qty = $(this).parent().find("input").val();
 		$.post("shopping-cart", {productId: productId, qty: (qty == 0) ? 1 : qty}, "json")
 		.done(function (response) {
 			$("#num-of-items").text(response);

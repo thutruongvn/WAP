@@ -13,7 +13,7 @@
 <%--    <div class="modal-content">--%>
 <%--        <span class="close">&times;</span>--%>
 <jsp:include page="header.jsp"></jsp:include>
-<div class="container">
+<div class="container below-banner">
         <div id="productTitle" ><h1>Your Cart</h1></div>
 
         <div class="row shopping-cart">
@@ -33,11 +33,19 @@
                 <c:forEach items="${cartItems}" var="item">
                     <tr class="item" id="item_${item.item.id}">
                         <td><input class="check" type="checkbox" value="${item.item.id}"></td>
-                        <td class="muted center_text"><a href="/"><img src="<c:url value="/resources/img/${item.item.img}" />" class="img-thumbnail width100" alt="${item.item.name}"></a></td>
+                        <td class="muted center_text"><a href="/">
+                            <img src="<c:url value="/resources/img/${item.item.img}" />" class="img-thumbnail width100"
+                                 alt="${item.item.name}"></a>
+                        </td>
                         <td>${item.item.name}</td>
-                        <td><input class="qty" type="number" placeholder="1" class="input-mini" value="${item.quantity}" min="1" id="quantity_${item.item.id}"></td>
-                        <td class="price format-money">${item.item.price}</td>
-                        <td class="total format-money">${item.item.price * item.quantity}</td>
+                        <td>
+<%--                            <span class="display-none">&minus;</span>--%>
+                            <input class="qty" type="number" placeholder="1" class="input-mini" value="${item.quantity}"
+                                   min="1" id="quantity_${item.item.id}" >
+<%--                            <span class="icon-add">&plus;</span>--%>
+                        </td>
+                        <td ><span class="price format-money">${item.item.price}</span> </td>
+                        <td ><span class="total format-money" id="sum_${item.item.id}">${item.item.price * item.quantity}</span> </td>
                     </tr>
                 </c:forEach>
                 <tr>
@@ -46,7 +54,7 @@
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td><strong>Total</strong></td>
-                    <td><strong id="sum">$${totalPrice}</strong></td>
+                    <td><strong >$<span id="sum">${totalPrice}</span></strong></td>
                 </tr>
                 </tbody>
             </table>

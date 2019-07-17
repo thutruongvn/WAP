@@ -9,7 +9,7 @@
 <!-- Footer -->
 <footer>
     <div class="container">
-        <p class="m-0 text-center text-dark">Copyright &copy; CS472</p>
+        <p class="m-0 text-center text-dark">Copyright &copy; CS472 by Thu Truong</p>
     </div>
 
     <!-- /.container -->
