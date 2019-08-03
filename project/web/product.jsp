@@ -18,8 +18,8 @@
 <%--  <link href="/resources/css/custom.css" rel="stylesheet" type="text/css" />--%>
 <%--  </head>--%>
 <%--  <body>--%>
-<jsp:include page="header.jsp"></jsp:include>
-
+<%--<jsp:include page="header.jsp"></jsp:include>--%>
+<%@ include file="header.jsp"%>
 <div class="container below-banner">
   <c:forEach items="${products}" var="product">
     <%--      <c:url value='shopping-cart' var="linkAddToCart">--%>
